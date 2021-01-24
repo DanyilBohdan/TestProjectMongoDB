@@ -83,7 +83,7 @@ public class CustomerServiceIT {
 
         Customer createdCustomer = customerService.insertCustomer(customer);
 
-        Customer foundCustomer = customerService.findByAddressList(createdCustomer.getAddressList()).get().get(0);
+        Customer foundCustomer = customerService.findByAddressList(createdCustomer.getAddressList().get(0)).get().get(0);
 
         Assert.assertEquals(customer.getId(), foundCustomer.getId());
         Assert.assertEquals(customer.getFirstName(), foundCustomer.getFirstName());

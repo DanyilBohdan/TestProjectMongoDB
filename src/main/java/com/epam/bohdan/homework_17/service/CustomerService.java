@@ -17,7 +17,7 @@ public interface CustomerService {
 
     Optional<List<Customer>> findByFirstNameAndLastName(String firstName, String lastName);
 
-    Optional<List<Customer>> findByAddressList(List<Address> addressList);
+    Optional<List<Customer>> findByAddressList(Address address);
 
     Optional<List<Customer>> findByCardNumber(Integer id);
 

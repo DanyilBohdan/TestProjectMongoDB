@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -42,8 +43,8 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Optional<List<Customer>> findByAddressList(List<Address> addressList) {
-        return customerRepository.findCustomersByAddressList(addressList);
+    public Optional<List<Customer>> findByAddressList(Address address) {
+        return customerRepository.findCustomersByAddressList(Collections.singletonList(address));
     }
 
     @Override
