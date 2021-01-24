@@ -1,0 +1,6 @@
+spring:
+  data:
+    mongodb:
+      username: root
+      password: 1111
+      uri: mongodb://host:27017/customerDB
