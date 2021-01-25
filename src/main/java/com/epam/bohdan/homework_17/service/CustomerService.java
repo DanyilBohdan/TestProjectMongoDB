@@ -13,15 +13,15 @@ public interface CustomerService {
 
     Customer updateCustomer(Customer customer);
 
-    Optional<List<Customer>> findById(Integer id);
+    List<Customer> findById(Integer id);
 
-    Optional<List<Customer>> findByFirstNameAndLastName(String firstName, String lastName);
+    List<Customer> findByFirstNameAndLastName(String firstName, String lastName);
 
-    Optional<List<Customer>> findByAddressList(Address address);
+    List<Customer> findByAddressList(Address address);
 
-    Optional<List<Customer>> findByCardNumber(Integer id);
+    List<Customer> findByCardNumber(Integer id);
 
-    Optional<List<Customer>> findCustomersWithExpiredCard();
+    List<Customer> findCustomersWithExpiredCard();
 
     void delete(Integer id);
 }

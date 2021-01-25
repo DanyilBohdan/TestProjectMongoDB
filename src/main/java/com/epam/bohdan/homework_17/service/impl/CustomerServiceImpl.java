@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
@@ -33,28 +32,28 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Optional<List<Customer>> findById(Integer id) {
-        return customerRepository.findCustomersById(id);
+    public List<Customer> findById(Integer id) {
+        return customerRepository.findCustomersById(id).orElseThrow();
     }
 
     @Override
-    public Optional<List<Customer>> findByFirstNameAndLastName(String firstName, String lastName) {
-        return customerRepository.findCustomersByFirstNameAndLastName(firstName, lastName);
+    public List<Customer> findByFirstNameAndLastName(String firstName, String lastName) {
+        return customerRepository.findCustomersByFirstNameAndLastName(firstName, lastName).orElseThrow();
     }
 
     @Override
-    public Optional<List<Customer>> findByAddressList(Address address) {
-        return customerRepository.findCustomersByAddressList(Collections.singletonList(address));
+    public List<Customer> findByAddressList(Address address) {
+        return customerRepository.findCustomersByAddressList(Collections.singletonList(address)).orElseThrow();
     }
 
     @Override
-    public Optional<List<Customer>> findByCardNumber(Integer cardNumber) {
-        return customerRepository.findCustomersByCardNumber(cardNumber);
+    public List<Customer> findByCardNumber(Integer cardNumber) {
+        return customerRepository.findCustomersByCardNumber(cardNumber).orElseThrow();
     }
 
     @Override
-    public Optional<List<Customer>> findCustomersWithExpiredCard() {
-        return customerRepository.findCustomersWithExpiredCard(LocalDate.now());
+    public List<Customer> findCustomersWithExpiredCard() {
+        return customerRepository.findCustomersWithExpiredCard(LocalDate.now()).orElseThrow();
     }
 
     @Override

@@ -7,11 +7,11 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.time.LocalDate;
 
-@RunWith(SpringJUnit4ClassRunner.class)
+@RunWith(SpringRunner.class)
 @SpringBootTest
 public class CustomerServiceIT {
 
@@ -51,7 +51,7 @@ public class CustomerServiceIT {
 
         Customer createdCustomer = customerService.insertCustomer(customer);
 
-        Customer foundCustomer = customerService.findById(createdCustomer.getId()).get().get(0);
+        Customer foundCustomer = customerService.findById(createdCustomer.getId()).get(0);
 
         Assert.assertEquals(customer.getId(), foundCustomer.getId());
         Assert.assertEquals(customer.getFirstName(), foundCustomer.getFirstName());
@@ -67,7 +67,7 @@ public class CustomerServiceIT {
 
         Customer createdCustomer = customerService.insertCustomer(customer);
 
-        Customer foundCustomer = customerService.findByFirstNameAndLastName(createdCustomer.getFirstName(), createdCustomer.getLastName()).get().get(0);
+        Customer foundCustomer = customerService.findByFirstNameAndLastName(createdCustomer.getFirstName(), createdCustomer.getLastName()).get(0);
 
         Assert.assertEquals(customer.getId(), foundCustomer.getId());
         Assert.assertEquals(customer.getFirstName(), foundCustomer.getFirstName());
@@ -83,7 +83,7 @@ public class CustomerServiceIT {
 
         Customer createdCustomer = customerService.insertCustomer(customer);
 
-        Customer foundCustomer = customerService.findByAddressList(createdCustomer.getAddressList().get(0)).get().get(0);
+        Customer foundCustomer = customerService.findByAddressList(createdCustomer.getAddressList().get(0)).get(0);
 
         Assert.assertEquals(customer.getId(), foundCustomer.getId());
         Assert.assertEquals(customer.getFirstName(), foundCustomer.getFirstName());
@@ -99,7 +99,7 @@ public class CustomerServiceIT {
 
         Customer createdCustomer = customerService.insertCustomer(customer);
 
-        Customer foundCustomer = customerService.findByCardNumber(createdCustomer.getAccountList().get(0).getCardNumber()).get().get(0);
+        Customer foundCustomer = customerService.findByCardNumber(createdCustomer.getAccountList().get(0).getCardNumber()).get(0);
 
         Assert.assertEquals(customer.getId(), foundCustomer.getId());
         Assert.assertEquals(customer.getFirstName(), foundCustomer.getFirstName());
@@ -118,7 +118,7 @@ public class CustomerServiceIT {
         Customer createdCustomer1 = customerService.insertCustomer(customer1);
         Customer createdCustomer2 = customerService.insertCustomer(customer2);
 
-        Customer foundCustomer = customerService.findCustomersWithExpiredCard().get().get(0);
+        Customer foundCustomer = customerService.findCustomersWithExpiredCard().get(0);
 
         Assert.assertEquals(createdCustomer1.getId(), foundCustomer.getId());
         Assert.assertEquals(createdCustomer1.getFirstName(), foundCustomer.getFirstName());
