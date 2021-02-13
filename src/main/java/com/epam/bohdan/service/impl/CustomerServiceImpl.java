@@ -1,9 +1,9 @@
-package com.epam.bohdan.homework_17.service.impl;
+package com.epam.bohdan.service.impl;
 
-import com.epam.bohdan.homework_17.model.Address;
-import com.epam.bohdan.homework_17.model.Customer;
-import com.epam.bohdan.homework_17.repository.CustomerRepository;
-import com.epam.bohdan.homework_17.service.CustomerService;
+import com.epam.bohdan.model.Address;
+import com.epam.bohdan.model.Customer;
+import com.epam.bohdan.repository.CustomerRepository;
+import com.epam.bohdan.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

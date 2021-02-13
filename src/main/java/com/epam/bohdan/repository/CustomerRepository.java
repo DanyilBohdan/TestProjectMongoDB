@@ -1,7 +1,7 @@
-package com.epam.bohdan.homework_17.repository;
+package com.epam.bohdan.repository;
 
-import com.epam.bohdan.homework_17.model.Address;
-import com.epam.bohdan.homework_17.model.Customer;
+import com.epam.bohdan.model.Address;
+import com.epam.bohdan.model.Customer;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 

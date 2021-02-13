@@ -1,8 +1,8 @@
-package com.epam.bohdan.homework_17;
+package com.epam.bohdan;
 
-import com.epam.bohdan.homework_17.model.Account;
-import com.epam.bohdan.homework_17.model.Address;
-import com.epam.bohdan.homework_17.model.Customer;
+import com.epam.bohdan.model.Account;
+import com.epam.bohdan.model.Address;
+import com.epam.bohdan.model.Customer;
 import net.bytebuddy.utility.RandomString;
 
 import java.security.SecureRandom;

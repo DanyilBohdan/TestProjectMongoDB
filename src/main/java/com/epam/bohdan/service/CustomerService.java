@@ -1,11 +1,9 @@
-package com.epam.bohdan.homework_17.service;
+package com.epam.bohdan.service;
 
-import com.epam.bohdan.homework_17.model.Address;
-import com.epam.bohdan.homework_17.model.Customer;
-import org.springframework.data.mongodb.repository.Query;
+import com.epam.bohdan.model.Address;
+import com.epam.bohdan.model.Customer;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface CustomerService {
 

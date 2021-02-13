@@ -1,10 +1,10 @@
-package com.epam.bohdan.homework_17;
+package com.epam.bohdan;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Homework17ApplicationTests {
+class MainApplicationTests {
 
     @Test
     void contextLoads() {

@@ -1,4 +1,4 @@
-package com.epam.bohdan.homework_17.model;
+package com.epam.bohdan.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

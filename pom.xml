@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.epam.bohdan</groupId>
-    <artifactId>homework_17</artifactId>
+    <artifactId>TestProjectMongoDB</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>homework_17</name>
+    <name>TestProjectMongoDB</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>11</java.version>

@@ -1,7 +1,7 @@
-package com.epam.bohdan.homework_17;
+package com.epam.bohdan;
 
-import com.epam.bohdan.homework_17.model.Customer;
-import com.epam.bohdan.homework_17.service.CustomerService;
+import com.epam.bohdan.model.Customer;
+import com.epam.bohdan.service.CustomerService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
